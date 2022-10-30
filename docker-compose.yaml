@@ -1,12 +1,11 @@
 version: "3"
 
 services:
-  nginx_server:
-    image: nginx
+  nginx_gateway_server:
+    image: nginx:1.23.2
     network_mode: "host"
-    container_name: nginx_container
+    container_name: nginx_gateway_container
     restart: always
-    # ports:
-    #   - 80:80
     volumes:
+      - ./www/:/home/
       - ./nginx/conf.d:/etc/nginx/conf.d
