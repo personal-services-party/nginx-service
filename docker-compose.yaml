@@ -8,4 +8,4 @@ services:
     restart: always
     volumes:
       - ./www/:/home/
-      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./conf:/etc/nginx/conf.d
